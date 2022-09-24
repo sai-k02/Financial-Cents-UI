@@ -13,7 +13,6 @@ import SkeletonHeader from "./SkeletonHeader";
 interface HeaderProps {
     Title: String,
     Subtitle?: String,
-    Avatar?: any
 }
 
 const HeaderMain: NextPage<HeaderProps> = (props: HeaderProps) => {
@@ -42,18 +41,16 @@ const HeaderMain: NextPage<HeaderProps> = (props: HeaderProps) => {
             <FadeIn>
                 <PageHeader
                     className="HeaderMain"
-                    title={<a onClick={() => location.assign("/")}>{props.Title}</a>}
+                    title={<Title level={3} onClick={() => location.assign("/")}>{props.Title}</Title>}
                     subTitle={props.Subtitle}
-                    avatar={{ src: "../public/TIAA.png", shape: "square", size: 'large' }}
                     extra={[
-                        <Button className="button-primary" >
-                            Sign In
-                        </Button>,
-                        <Button className="button-primary" >
-                            Sign Out
-                        </Button>,
+                        <a className="button-primary" >
+                            <Title level={4}>Sign In</Title>
+                        </a>,
+                        <a className="button-primary" >
+                            <Title level={4}>Sign </Title>
+                        </a>,
                     ]}
-
                 />
             </FadeIn>
         )

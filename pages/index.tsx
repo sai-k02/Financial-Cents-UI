@@ -7,11 +7,12 @@ import HeaderMain from './Components/Header'
 import logo from '../public/TIAA.svg'
 const Home: NextPage = () => {
   return (
-    <HeaderMain
+    <div className={"app"}>
+      <HeaderMain
+        Title={"financial cents"}
+      />
+    </div>
 
-      Title={"financial cents"}
-      Avatar={logo}
-    />
   )
 }
 
